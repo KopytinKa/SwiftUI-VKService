@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct GroupCellView: View {
+    let group: Group
+    
     var body: some View {
         HStack {
             AvatarImage {
-                Image("community")
+                Image("\(self.group.avatar ?? "community")")
             }
 
-            Text("Название сообщества")
+            Text("\(self.group.name)")
             
             Spacer()
         }
+        .lineLimit(1)
     }
 }
 
 struct GroupCellView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupCellView()
+        GroupCellView(group: Group(name: "Любители котов", avatar: "camera"))
     }
 }

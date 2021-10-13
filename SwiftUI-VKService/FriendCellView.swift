@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct FriendCellView: View {
+    let friend: Friend
+    
     var body: some View {
         HStack {
             AvatarImage {
-                Image("camera")
+                Image("\(self.friend.avatar ?? "camera")")
             }
             
             VStack (alignment: .leading){
-                Text("Имя Фамилия")
+                Text("\(self.friend.getFullName())")
                 
-                Text("Компания, Город")
+                Text("\(self.friend.company ?? ""), \(self.friend.city ?? "")")
                     .font(.footnote)
                     .fontWeight(.thin)
             }
@@ -30,6 +32,6 @@ struct FriendCellView: View {
 
 struct FriendCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendCellView()
+        FriendCellView(friend: Friend(lastName: "Ivanov", firstName: "Ivan", avatar: nil, company: "QSOFT", city: "Moscow"))
     }
 }

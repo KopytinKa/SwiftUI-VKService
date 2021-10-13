@@ -12,6 +12,10 @@ struct LoginView: View {
     @State private var login: String = ""
     @State private var password: String = ""
     @State private var shouldShowLogo: Bool = true
+    @State private var showIncorrentCredentialsWarning: Bool = false
+    @Binding var isUserLoggedIn: Bool
+    
+    let loginService = LoginService()
     
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification)
@@ -62,7 +66,7 @@ struct LoginView: View {
                     .frame(maxWidth: 300)
                     
                     HStack {
-                        Button(action: { print("Hello") }) {
+                        Button(action: verifyLoginData) {
                             Text("Войти")
                                 .font(.title3)
                         }
@@ -92,13 +96,25 @@ struct LoginView: View {
         .accentColor(.purple)
         .onTapGesture {
             UIApplication.shared.endEditing()
+        }.alert(isPresented: $showIncorrentCredentialsWarning, content: {
+            Alert(title: Text("Ошибка"), message: Text("Введены неверные данные пользователя"), dismissButton: .cancel())
+        })
+    }
+    
+    private func verifyLoginData() {
+        if loginService.checkUserData(login: login, password: password) {
+            isUserLoggedIn = true
+        } else {
+            showIncorrentCredentialsWarning = true
         }
+        
+        password = ""
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(isUserLoggedIn: .constant(false))
     }
 }
 

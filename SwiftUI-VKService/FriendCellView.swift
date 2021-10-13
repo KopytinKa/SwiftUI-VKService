@@ -16,10 +16,10 @@ struct FriendCellView: View {
                 Image("\(self.friend.avatar ?? "camera")")
             }
             
-            VStack (alignment: .leading){
+            VStack (alignment: .leading) {
                 Text("\(self.friend.getFullName())")
                 
-                Text("\(self.friend.company ?? ""), \(self.friend.city ?? "")")
+                Text("\(self.friend.userInfo)")
                     .font(.footnote)
                     .fontWeight(.thin)
             }

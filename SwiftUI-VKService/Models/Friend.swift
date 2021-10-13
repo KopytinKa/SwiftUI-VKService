@@ -15,6 +15,12 @@ class Friend: Identifiable {
     let company: String?
     let city: String?
     
+    var userInfo: String {
+        [company, city]
+            .compactMap { $0 }
+            .joined(separator: ", ")
+    }
+    
     init(lastName: String, firstName: String, avatar: String?, company: String?, city: String?) {
         self.lastName = lastName
         self.firstName = firstName

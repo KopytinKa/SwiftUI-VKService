@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B5E1CA42715D9E700521128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CA32715D9E700521128 /* ContentView.swift */; };
+		8B5E1CA92715DB3F00521128 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5E1CA82715DB3F00521128 /* ASCollectionView */; };
+		8B5E1CAB2715E26600521128 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CAA2715E26600521128 /* LoginService.swift */; };
+		8B5E1CAE2715E48F00521128 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CAD2715E48F00521128 /* FriendsView.swift */; };
+		8B5E1CB12715E8FB00521128 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CB02715E8FB00521128 /* Friend.swift */; };
+		8B5E1CB32715EEFC00521128 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CB22715EEFC00521128 /* GroupsView.swift */; };
+		8B5E1CB52715F02D00521128 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CB42715F02D00521128 /* NewsView.swift */; };
+		8B5E1CB72716D2FA00521128 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CB62716D2FA00521128 /* Group.swift */; };
+		8B5E1CB92716D55E00521128 /* FriendPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CB82716D55E00521128 /* FriendPhotosView.swift */; };
+		8B5E1CBB2716D83800521128 /* FriendPhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CBA2716D83800521128 /* FriendPhotoCellView.swift */; };
+		8B5E1CBD2716D96500521128 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CBC2716D96500521128 /* Photo.swift */; };
+		8B5E1CBF2716EC3600521128 /* SectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E1CBE2716EC3600521128 /* SectionDataModel.swift */; };
 		8BFE877A270AE57B004325E4 /* SwiftUI_VKServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */; };
 		8BFE877C270AE57B004325E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE877B270AE57B004325E4 /* LoginView.swift */; };
 		8BFE877E270AE57E004325E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFE877D270AE57E004325E4 /* Assets.xcassets */; };
@@ -18,6 +30,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B5E1CA32715D9E700521128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B5E1CAA2715E26600521128 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		8B5E1CAD2715E48F00521128 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		8B5E1CB02715E8FB00521128 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		8B5E1CB22715EEFC00521128 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
+		8B5E1CB42715F02D00521128 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		8B5E1CB62716D2FA00521128 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		8B5E1CB82716D55E00521128 /* FriendPhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotosView.swift; sourceTree = "<group>"; };
+		8B5E1CBA2716D83800521128 /* FriendPhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoCellView.swift; sourceTree = "<group>"; };
+		8B5E1CBC2716D96500521128 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		8B5E1CBE2716EC3600521128 /* SectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDataModel.swift; sourceTree = "<group>"; };
 		8BFE8776270AE57B004325E4 /* SwiftUI-VKService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-VKService.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKServiceApp.swift; sourceTree = "<group>"; };
 		8BFE877B270AE57B004325E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -34,12 +57,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5E1CA92715DB3F00521128 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B5E1CA52715DA0B00521128 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8BFE878B270E0609004325E4 /* CircleShadowViewModifier.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		8B5E1CA62715DA1B00521128 /* ViewBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				8BFE878D2710A171004325E4 /* AvatarImageViewBuilder.swift */,
+			);
+			path = ViewBuilders;
+			sourceTree = "<group>";
+		};
+		8B5E1CAC2715E2DF00521128 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E1CAA2715E26600521128 /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B5E1CAF2715E8E900521128 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E1CB02715E8FB00521128 /* Friend.swift */,
+				8B5E1CB62716D2FA00521128 /* Group.swift */,
+				8B5E1CBC2716D96500521128 /* Photo.swift */,
+				8B5E1CBE2716EC3600521128 /* SectionDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8BFE876D270AE57B004325E4 = {
 			isa = PBXGroup;
 			children = (
@@ -59,14 +118,22 @@
 		8BFE8778270AE57B004325E4 /* SwiftUI-VKService */ = {
 			isa = PBXGroup;
 			children = (
-				8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */,
-				8BFE877B270AE57B004325E4 /* LoginView.swift */,
-				8BFE8787270DFC4A004325E4 /* GroupCellView.swift */,
-				8BFE8789270DFC63004325E4 /* FriendCellView.swift */,
-				8BFE878B270E0609004325E4 /* CircleShadowViewModifier.swift */,
-				8BFE878D2710A171004325E4 /* AvatarImageViewBuilder.swift */,
-				8BFE877D270AE57E004325E4 /* Assets.xcassets */,
 				8BFE877F270AE57E004325E4 /* Preview Content */,
+				8BFE877D270AE57E004325E4 /* Assets.xcassets */,
+				8B5E1CAF2715E8E900521128 /* Models */,
+				8B5E1CAC2715E2DF00521128 /* Services */,
+				8B5E1CA62715DA1B00521128 /* ViewBuilders */,
+				8B5E1CA52715DA0B00521128 /* ViewModifiers */,
+				8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */,
+				8B5E1CA32715D9E700521128 /* ContentView.swift */,
+				8BFE877B270AE57B004325E4 /* LoginView.swift */,
+				8B5E1CB22715EEFC00521128 /* GroupsView.swift */,
+				8BFE8787270DFC4A004325E4 /* GroupCellView.swift */,
+				8B5E1CAD2715E48F00521128 /* FriendsView.swift */,
+				8BFE8789270DFC63004325E4 /* FriendCellView.swift */,
+				8B5E1CB82716D55E00521128 /* FriendPhotosView.swift */,
+				8B5E1CBA2716D83800521128 /* FriendPhotoCellView.swift */,
+				8B5E1CB42715F02D00521128 /* NewsView.swift */,
 			);
 			path = "SwiftUI-VKService";
 			sourceTree = "<group>";
@@ -95,6 +162,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI-VKService";
+			packageProductDependencies = (
+				8B5E1CA82715DB3F00521128 /* ASCollectionView */,
+			);
 			productName = "SwiftUI-VKService";
 			productReference = 8BFE8776270AE57B004325E4 /* SwiftUI-VKService.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 8BFE876D270AE57B004325E4;
+			packageReferences = (
+				8B5E1CA72715DB3F00521128 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 8BFE8777270AE57B004325E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,12 +222,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5E1CBD2716D96500521128 /* Photo.swift in Sources */,
 				8BFE877C270AE57B004325E4 /* LoginView.swift in Sources */,
 				8BFE878C270E0609004325E4 /* CircleShadowViewModifier.swift in Sources */,
+				8B5E1CB32715EEFC00521128 /* GroupsView.swift in Sources */,
+				8B5E1CA42715D9E700521128 /* ContentView.swift in Sources */,
+				8B5E1CAE2715E48F00521128 /* FriendsView.swift in Sources */,
 				8BFE877A270AE57B004325E4 /* SwiftUI_VKServiceApp.swift in Sources */,
+				8B5E1CB72716D2FA00521128 /* Group.swift in Sources */,
+				8B5E1CBF2716EC3600521128 /* SectionDataModel.swift in Sources */,
+				8B5E1CBB2716D83800521128 /* FriendPhotoCellView.swift in Sources */,
 				8BFE878E2710A171004325E4 /* AvatarImageViewBuilder.swift in Sources */,
 				8BFE878A270DFC63004325E4 /* FriendCellView.swift in Sources */,
+				8B5E1CB92716D55E00521128 /* FriendPhotosView.swift in Sources */,
+				8B5E1CB12715E8FB00521128 /* Friend.swift in Sources */,
+				8B5E1CB52715F02D00521128 /* NewsView.swift in Sources */,
 				8BFE8788270DFC4A004325E4 /* GroupCellView.swift in Sources */,
+				8B5E1CAB2715E26600521128 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B5E1CA72715DB3F00521128 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B5E1CA82715DB3F00521128 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B5E1CA72715DB3F00521128 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BFE876E270AE57B004325E4 /* Project object */;
 }

@@ -44,6 +44,8 @@
 		8BF0B7CC2738073100782446 /* PhotoDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7CB2738073100782446 /* PhotoDisplayItem.swift */; };
 		8BF0B7CE2738074800782446 /* PhotoDisplayItemFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7CD2738074800782446 /* PhotoDisplayItemFabric.swift */; };
 		8BF0B7D0273808D200782446 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7CF273808D200782446 /* PhotoViewModel.swift */; };
+		8BF0B7D62738384300782446 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7D52738384300782446 /* LoginViewModel.swift */; };
+		8BF0B7D8273839D800782446 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7D7273839D800782446 /* MainTabBarCoordinator.swift */; };
 		8BFE877A270AE57B004325E4 /* SwiftUI_VKServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */; };
 		8BFE877C270AE57B004325E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE877B270AE57B004325E4 /* LoginView.swift */; };
 		8BFE877E270AE57E004325E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFE877D270AE57E004325E4 /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 		8BF0B7CB2738073100782446 /* PhotoDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDisplayItem.swift; sourceTree = "<group>"; };
 		8BF0B7CD2738074800782446 /* PhotoDisplayItemFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDisplayItemFabric.swift; sourceTree = "<group>"; };
 		8BF0B7CF273808D200782446 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		8BF0B7D52738384300782446 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8BF0B7D7273839D800782446 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
 		8BFE8776270AE57B004325E4 /* SwiftUI-VKService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-VKService.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKServiceApp.swift; sourceTree = "<group>"; };
 		8BFE877B270AE57B004325E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 		8B5E1CD0271832BF00521128 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8BF0B7D42738382C00782446 /* ViewModel */,
 				8B5E1CD1271832C900521128 /* View */,
 			);
 			path = Login;
@@ -405,6 +410,14 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		8BF0B7D42738382C00782446 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8BF0B7D52738384300782446 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8BFE876D270AE57B004325E4 = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +453,7 @@
 				8B5E1CC0271831E800521128 /* UserStories */,
 				8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */,
 				8B5E1CA32715D9E700521128 /* ContentView.swift */,
+				8BF0B7D7273839D800782446 /* MainTabBarCoordinator.swift */,
 			);
 			path = "SwiftUI-VKService";
 			sourceTree = "<group>";
@@ -582,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF0B7D8273839D800782446 /* MainTabBarCoordinator.swift in Sources */,
 				8BF0B7572736CC8E00782446 /* Session.swift in Sources */,
 				8BF0B7C22736F6B300782446 /* FriendDisplayItem.swift in Sources */,
 				8BFE877C270AE57B004325E4 /* LoginView.swift in Sources */,
@@ -602,6 +617,7 @@
 				8B5E1CBB2716D83800521128 /* FriendPhotoCellView.swift in Sources */,
 				8BF0B7AE2736E8BF00782446 /* UserModel.swift in Sources */,
 				8BF0B7622736D2CA00782446 /* VKService.swift in Sources */,
+				8BF0B7D62738384300782446 /* LoginViewModel.swift in Sources */,
 				8BF0B7C82738021000782446 /* GroupDisplayItemFabric.swift in Sources */,
 				8BF0B7C02736F64700782446 /* FriendDisplayItemFabric.swift in Sources */,
 				8BFE878E2710A171004325E4 /* AvatarImageViewBuilder.swift in Sources */,

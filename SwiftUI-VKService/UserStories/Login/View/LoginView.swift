@@ -13,6 +13,9 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var shouldShowLogo: Bool = true
     @State private var showIncorrentCredentialsWarning: Bool = false
+    
+    @ObservedObject var viewModel: LoginViewModel
+    
     @Binding var isUserLoggedIn: Bool
     
     let loginService = LoginService()
@@ -114,7 +117,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(isUserLoggedIn: .constant(false))
+        LoginView(viewModel: LoginViewModel(), isUserLoggedIn: .constant(false))
     }
 }
 

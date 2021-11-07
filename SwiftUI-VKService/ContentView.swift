@@ -21,7 +21,7 @@ struct ContentView: View {
                 VKAuthView(model: webViewModel)
                 
                 NavigationLink(
-                    destination: LoginView(isUserLoggedIn: $shouldShowMainView)
+                    destination: LoginView(viewModel: LoginViewModel(), isUserLoggedIn: $shouldShowMainView)
                         .navigationBarBackButtonHidden(true),
                     isActive: $webViewModel.shouldRedirectToLoginView,
                     label: {

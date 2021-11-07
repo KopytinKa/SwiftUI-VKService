@@ -9,6 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct AvatarImage: View {
+    @State private var isScaled = false
+
     var content: WebImage
     
     init(@ViewBuilder content: () -> WebImage) {
@@ -22,5 +24,12 @@ struct AvatarImage: View {
             .cornerRadius(15)
             .modifier(CircleShadow(shadowColor: .black, shadowRadius: 4, shadowOpacity: 0.7))
             .padding()
+            .scaleEffect(isScaled ? 0.75 : 1)
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: 1.0)) {
+                    self.isScaled.toggle()
+                }
+            }
+
     }
 }

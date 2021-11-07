@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 class LoginService {
     let correctLogin = "1"
     let correctPassword = "1"

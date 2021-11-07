@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct AvatarImage: View {
-    var content: Image
+    var content: WebImage
     
-    init(@ViewBuilder content: () -> Image) {
+    init(@ViewBuilder content: () -> WebImage) {
         self.content = content()
     }
     

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>502042934568-oano3dadj41deebef0ubjnvg47ue8s53.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.502042934568-oano3dadj41deebef0ubjnvg47ue8s53</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAoHkdqxk8Zh8944EfpeCzfgjdxiZ-XgPs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>502042934568</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kopytinka.SwiftUI-VKService</string>
+	<key>PROJECT_ID</key>
+	<string>vk-swiftui</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vk-swiftui.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:502042934568:ios:27406a1b7c1a1b5f5be41d</string>
+</dict>
+</plist>

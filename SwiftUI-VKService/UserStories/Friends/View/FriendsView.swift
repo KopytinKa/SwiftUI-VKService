@@ -8,34 +8,40 @@
 import SwiftUI
 
 struct FriendsView: View {
-    @State private var friends: [Friend] = [
-        Friend(lastName: "Ivanov", firstName: "Ivan", avatar: nil, company: "QSOFT", city: "Moscow"),
-        Friend(lastName: "Petrov", firstName: "Petr", avatar: "community", company: "mail.ru", city: "Kazan"),
-        Friend(lastName: "Vasiliev", firstName: "Vasiliy", avatar: nil, company: "yandex", city: nil),
-        Friend(lastName: "Vasiliev", firstName: "Kirill", avatar: nil, company: "yandex", city: nil),
-        Friend(lastName: "Vasiliev", firstName: "Petr", avatar: nil, company: "yandex", city: nil),
-        Friend(lastName: "Vasiliev", firstName: "Ivan", avatar: nil, company: "yandex", city: nil),
-        Friend(lastName: "Kirillov", firstName: "Kirill", avatar: nil, company: nil, city: "Moscow")
-    ]
+    @EnvironmentObject var realmService: RealmService
+    @EnvironmentObject var apiVKService: VKService
+    
+    @ObservedObject var viewModel: FriendViewModel
     
     var body: some View {
         List(arrayLetter(), rowContent: { section in
             Section(header: Text("\(section.letter)")) {
                 ForEach(arrayByLetter(section.letter)) { friend in
-                    NavigationLink(destination: FriendPhotosView(friend: friend)) {
+                    NavigationLink {
+                        LazyView {
+                            FriendPhotosView(
+                                viewModel: PhotoViewModel(
+                                    friend: friend,
+                                    apiVKService: self.apiVKService,
+                                    realmService: self.realmService
+                                )
+                            )
+                        }
+                    } label: {
                         FriendCellView(friend: friend)
                     }
                 }
             }
         })
         .listStyle(.plain)
+        .onAppear(perform: self.viewModel.onAppear)
     }
     
     private func arrayLetter() -> [SectionDataModel] {
         var resultArray = [SectionDataModel]()
         
-        for friend in friends {
-            let nameLetter = String(friend.lastName.prefix(1))
+        for friend in self.viewModel.displayItems {
+            let nameLetter = String(friend.fullName.prefix(1))
             let letterModel = SectionDataModel(letter: nameLetter)
             if !resultArray.contains(letterModel) {
                 resultArray.append(letterModel)
@@ -47,11 +53,11 @@ struct FriendsView: View {
         return resultArray
     }
     
-    private func arrayByLetter(_ letter: String) -> [Friend] {
-        var resultArray = [Friend]()
+    private func arrayByLetter(_ letter: String) -> [FriendDisplayItem] {
+        var resultArray = [FriendDisplayItem]()
         
-        for friend in friends {
-            let nameLetter = String(friend.lastName.prefix(1))
+        for friend in self.viewModel.displayItems {
+            let nameLetter = String(friend.fullName.prefix(1))
             if nameLetter == letter {
                 resultArray.append(friend)
             }
@@ -63,6 +69,6 @@ struct FriendsView: View {
 
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView()
+        FriendsView(viewModel: FriendViewModel(apiVKService: VKService(), realmService: RealmService()))
     }
 }

@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FriendPhotoCellView: View {
-    let photo: Photo
+    let photo: PhotoDisplayItem
     
     var body: some View {
         VStack {
-            Image("\(self.photo.url)")
+            WebImage(url: URL(string: self.photo.url))
                 .resizable()
                 .frame(width: 90, height: 90)
             
@@ -31,6 +32,6 @@ struct FriendPhotoCellView: View {
 
 struct FriendPhotoCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendPhotoCellView(photo: Photo(url: "vmeste_logo", likesCount: 213, userLikes: 1))
+        FriendPhotoCellView(photo: PhotoDisplayItem(id: 1, url: "vmeste_logo", likesCount: 213, userLikes: 1))
     }
 }

@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct GroupCellView: View {
-    let group: Group
+    let group: GroupDisplayItem
     
     var body: some View {
         HStack {
             AvatarImage {
-                Image("\(self.group.avatar ?? "community")")
+                WebImage(url: URL(string: self.group.avatar))
+                    .placeholder(Image("community"))
             }
 
             Text("\(self.group.name)")
@@ -26,6 +28,6 @@ struct GroupCellView: View {
 
 struct GroupCellView_Previews: PreviewProvider {
     static var previews: some View {
-        GroupCellView(group: Group(name: "Любители котов", avatar: "camera"))
+        GroupCellView(group: GroupDisplayItem(id: 1, name: "Любители котов", avatar: "camera"))
     }
 }

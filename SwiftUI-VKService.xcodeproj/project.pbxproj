@@ -398,6 +398,13 @@
 			path = DisplayItems;
 			sourceTree = "<group>";
 		};
+		8BF0B7D12738143C00782446 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		8BFE876D270AE57B004325E4 = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +426,7 @@
 		8BFE8778270AE57B004325E4 /* SwiftUI-VKService */ = {
 			isa = PBXGroup;
 			children = (
+				8BF0B7D12738143C00782446 /* Animation */,
 				8BF0B7BC2736F56D00782446 /* Common */,
 				8BF0B7B92736F28600782446 /* Utils */,
 				8BF0B7472736C85E00782446 /* GoogleService-Info.plist */,

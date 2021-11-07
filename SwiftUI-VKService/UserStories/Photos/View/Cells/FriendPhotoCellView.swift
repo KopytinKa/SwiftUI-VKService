@@ -9,6 +9,8 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct FriendPhotoCellView: View {
+    @State private var isLiked = false
+    
     let photo: PhotoDisplayItem
     
     var body: some View {
@@ -18,9 +20,15 @@ struct FriendPhotoCellView: View {
                 .frame(width: 90, height: 90)
             
             HStack {
-                Button(action: { print("press button") }) {
-                    Image(systemName: "\(self.photo.userLikes > 0 ? "heart.fill" : "heart")")
+                Button(action: {
+                    print("press button")
+                    withAnimation(.easeInOut(duration: 1.0)) {
+                        self.isLiked.toggle()
+                    }
+                }) {
+                    Image(systemName: "\(isLiked ? "heart.fill" : "heart")")
                 }
+                .scaleEffect(isLiked ? 1.25 : 1)
                 
                 Text("\(self.photo.likesCount)")
             }

@@ -46,6 +46,7 @@
 		8BF0B7D0273808D200782446 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7CF273808D200782446 /* PhotoViewModel.swift */; };
 		8BF0B7D62738384300782446 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7D52738384300782446 /* LoginViewModel.swift */; };
 		8BF0B7D8273839D800782446 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7D7273839D800782446 /* MainTabBarCoordinator.swift */; };
+		8BF0B7F42738524900782446 /* MyPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF0B7F32738524900782446 /* MyPropertyWrapper.swift */; };
 		8BFE877A270AE57B004325E4 /* SwiftUI_VKServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */; };
 		8BFE877C270AE57B004325E4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE877B270AE57B004325E4 /* LoginView.swift */; };
 		8BFE877E270AE57E004325E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFE877D270AE57E004325E4 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		8BF0B7CF273808D200782446 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		8BF0B7D52738384300782446 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8BF0B7D7273839D800782446 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		8BF0B7F32738524900782446 /* MyPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertyWrapper.swift; sourceTree = "<group>"; };
 		8BFE8776270AE57B004325E4 /* SwiftUI-VKService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-VKService.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFE8779270AE57B004325E4 /* SwiftUI_VKServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_VKServiceApp.swift; sourceTree = "<group>"; };
 		8BFE877B270AE57B004325E4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF0B7BA2736F29100782446 /* LazyView.swift */,
+				8BF0B7F32738524900782446 /* MyPropertyWrapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				8BFE8788270DFC4A004325E4 /* GroupCellView.swift in Sources */,
 				8BF0B7BB2736F29200782446 /* LazyView.swift in Sources */,
 				8BF0B78C2736E77A00782446 /* AsyncOperation.swift in Sources */,
+				8BF0B7F42738524900782446 /* MyPropertyWrapper.swift in Sources */,
 				8B5E1CAB2715E26600521128 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

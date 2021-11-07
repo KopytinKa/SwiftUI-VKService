@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FriendCellView: View {
-    let friend: Friend
+    let friend: FriendDisplayItem
     
     var body: some View {
         HStack {
+            
             AvatarImage {
-                Image("\(self.friend.avatar ?? "camera")")
+                WebImage(url: URL(string: self.friend.avatar))
+                    .placeholder(Image("camera"))
             }
             
             VStack (alignment: .leading) {
-                Text("\(self.friend.getFullName())")
+                Text("\(self.friend.fullName)")
                 
                 Text("\(self.friend.userInfo)")
                     .font(.footnote)
@@ -32,6 +35,6 @@ struct FriendCellView: View {
 
 struct FriendCellView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendCellView(friend: Friend(lastName: "Ivanov", firstName: "Ivan", avatar: nil, company: "QSOFT", city: "Moscow"))
+        FriendCellView(friend: FriendDisplayItem(id: 1, fullName: "Ivanov Ivan", avatar: "", userInfo: "dfsdf"))
     }
 }

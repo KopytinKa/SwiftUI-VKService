@@ -10,20 +10,45 @@ import SwiftUI
 struct ContentView: View {
     @State private var shouldShowMainView: Bool = false
     
+    @EnvironmentObject var realmService: RealmService
+    @EnvironmentObject var apiVKService: VKService
+    
+    @ObservedObject var webViewModel: WebViewModel = WebViewModel()
+    
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedIn: $shouldShowMainView)
+                VKAuthView(model: webViewModel)
+                
+                NavigationLink(
+                    destination: LoginView(isUserLoggedIn: $shouldShowMainView)
+                        .navigationBarBackButtonHidden(true),
+                    isActive: $webViewModel.shouldRedirectToLoginView,
+                    label: {
+                        EmptyView()
+                    }
+                )
+                .navigationBarBackButtonHidden(true)
 
                 NavigationLink(
                     destination:
                         TabView {
-                            FriendsView()
+                            FriendsView(viewModel:
+                                            FriendViewModel(
+                                                apiVKService: self.apiVKService,
+                                                realmService: self.realmService
+                                            )
+                            )
                                 .tabItem {
                                     Image(systemName: "person.circle")
                                     Text("Друзья")
                                 }
-                            GroupsView()
+                            GroupsView(viewModel:
+                                        GroupViewModel(
+                                            apiVKService: self.apiVKService,
+                                            realmService: self.realmService
+                                        )
+                            )
                                 .tabItem {
                                     Image(systemName: "person.3")
                                     Text("Группы")

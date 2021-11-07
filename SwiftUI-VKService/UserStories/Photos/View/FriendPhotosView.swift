@@ -6,23 +6,33 @@
 //
 
 import SwiftUI
-import ASCollectionView
 
 struct FriendPhotosView: View {
     @ObservedObject var viewModel: PhotoViewModel
     
+    let columns = [
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity))
+    ]
+
+    
     var body: some View {
-        ASCollectionView(data: self.viewModel.displayItems) { photo, _ in
-            FriendPhotoCellView(photo: photo)
-        }.layout {
-            .grid(
-                layoutMode: .fixedNumberOfColumns(3),
-                itemSpacing: 0,
-                lineSpacing: 16
-            )
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns, alignment: .center, spacing: 16)  {
+                    if let photos = self.viewModel.displayItems {
+                        ForEach(photos) { photo in
+                            FriendPhotoCellView(photo: photo)
+                                .frame(height: geometry.size.width/3)
+                        }
+                    }
+                }
+            }
         }
         .navigationTitle(self.viewModel.friend.fullName)
         .onAppear(perform: self.viewModel.onAppear)
+
     }
 }
 

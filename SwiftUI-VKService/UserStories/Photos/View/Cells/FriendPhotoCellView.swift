@@ -17,7 +17,6 @@ struct FriendPhotoCellView: View {
         VStack {
             WebImage(url: URL(string: self.photo.url))
                 .resizable()
-                .frame(width: 90, height: 90)
             
             HStack {
                 Button(action: {
@@ -34,7 +33,6 @@ struct FriendPhotoCellView: View {
             }
             .lineLimit(1)
         }
-        .frame(width: 100, height: 125)
     }
 }
 
